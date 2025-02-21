@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Clone your GitHub repo (replace with your GitHub URL)
 RUN apt-get update && apt-get install -y git \
-    && git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git /app \
+    && git clone https://github.com/AkilLabs/ModelDeploy /app \
     && chmod +x /app/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile
 
 # Install dependencies
