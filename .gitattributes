@@ -1,0 +1,1 @@
+qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile filter=lfs diff=lfs merge=lfs -text
