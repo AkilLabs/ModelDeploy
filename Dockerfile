@@ -2,12 +2,10 @@ FROM python:3.9
 
 WORKDIR /app
 
-ARG GITHUB_TOKEN
-RUN apt-get update && apt-get install -y git \
-    && git clone https://YOUR_GITHUB_TOKEN@github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git /app \
-    && chmod +x /app/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile
+COPY ModelDeploy /app
 
 RUN pip install fastapi uvicorn
+RUN chmod +x /app/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile
 
 EXPOSE 8000
 
