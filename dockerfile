@@ -2,10 +2,10 @@ FROM python:3.9
 
 WORKDIR /app
 
-# Download the Llamafile model from Hugging Face
+# Download the Llamafile model
 RUN wget "https://huggingface.co/SalmanHabeeb/qwen-llamafiles/resolve/main/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile" -O /app/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile
 
-# Ensure the model is executable
+# Give execute permissions to the model
 RUN chmod +x /app/qwen1.5-0.5b-ggml-model-Q4_K_M.llamafile
 
 # Copy project files
